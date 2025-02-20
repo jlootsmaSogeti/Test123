@@ -1,14 +1,14 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Learning Github Script
 
 on:
   issues:
     types: [opened]
-    
+
 jobs:
   comment:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/github-script@0.8.0
         with:
